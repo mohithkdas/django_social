@@ -1,0 +1,16 @@
+django-admin startproject breadLoungeERP .
+python manage.py runserver
+python manage.py startapp products
+python manage.py makemigrations
+python manage.py migrate
+python manage.py createsuperuser
+
+
+1. view func setup for http resp
+2. In the new app craeted create urls.py
+3. goto urls in main app and import include fn, then add to the path using include fn from view
+4.Using templates - inside app create a templates dir and in it create a dir with the same name as the applet
+5.Once template is created go to app.py copy function name and paste it in the settings.py Installed apps section in the main app folder
+6.then in view.py goto the function that leads/involkes to the template then add 
+def about(request):
+    return render(request,'blog/about.html')
